@@ -1,0 +1,26 @@
+// size
+$center: 840px;
+
+// colors
+$mainColor: #7450f5;
+
+$colorText01: #000;
+$colorText02: #333;
+$colorText03: #666;
+
+@mixin layout {
+  width: 100%;
+  max-width: $center;
+  padding: 1rem;
+  margin: 0 auto;
+}
+
+@mixin nowrapText($lineCount) {
+  word-break: keep-all;
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $lineCount;
+  height: $lineCount * 1.5em;
+  -webkit-box-orient: vertical;
+}
